@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="745.0" stylesheets="@../resource/styles/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.searchResultProductController">
+   <top>
+      <MenuBar prefHeight="25.0" prefWidth="811.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="productTable" editable="true" prefHeight="200.0" prefWidth="200.0" styleClass="bg-Secondary" stylesheets="@../resource/styles/styles.css">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="75.0" text="Sr Number" />
+            <TableColumn fx:id="colCode" prefWidth="75.0" text="Code" />
+            <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colAmount" prefWidth="75.0" text="Amount" />
+            <TableColumn fx:id="colUnder" prefWidth="75.0" text="Understock" />
+            <TableColumn fx:id="colOver" prefWidth="75.0" text="Overstock" />
+         </columns>
+      </TableView>
+   </center>
+   <left>
+      <VBox prefHeight="664.0" prefWidth="270.0" spacing="5.0" stylesheets="@../resource/styles/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search Result" wrappingWidth="252.76220703125">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="161.0" fitWidth="279.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/SMRP.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="queryText" strokeType="OUTSIDE" strokeWidth="0.0" text="Query:" wrappingWidth="264.13671875">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="filterText" layoutX="10.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter:" wrappingWidth="264.13671875">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+         </children>
+         <styleClass>
+            <String fx:value="bg-Primary" />
+            <String fx:value=" menu" />
+         </styleClass>
+      </VBox>
+   </left>
+</BorderPane>

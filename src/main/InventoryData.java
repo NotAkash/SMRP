@@ -37,15 +37,3 @@ public class InventoryData {
     public void setProdLocation(String prodLocation) {this.prodLocation = prodLocation;}
     public void setProdDate(Date prodDate) {this.prodDate = prodDate;}
 }
-
-/*
-    May 2020 Subject Report:
-        1) This session most candidates addressed 2 AOKs. this is good
-        2) Unpack title, what it means. explain terms indicating meaning + shows familiarity with terms
-        3) Not dictionary meaning. Context of TOK
-        4) Don't rewrite title
-
-        6) Implications: evaluation of the title, good essays don't talk about a clear answer to the question.
-           Bring in other elements to the answer. Explore more perspective
-        7)
- */
